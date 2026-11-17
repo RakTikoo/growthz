@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "growthz"
+version = "0.1.0"
+description = "Batch-compute CDC growth z-scores and percentiles for a CSV of child measurements, using the published CDC LMS tables."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "RakTikoo" },
+]
+keywords = ["growth-charts", "cdc", "z-score", "percentile", "pediatrics", "lms"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = []
+
+[project.scripts]
+growthz = "growthz.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/RakTikoo/growthz"
+
+[tool.setuptools]
+packages = ["growthz"]
+
+[tool.setuptools.package-data]
+growthz = ["data/*.csv", "data/*.md"]

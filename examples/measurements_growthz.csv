@@ -1,0 +1,6 @@
+id,sex,age_months,weight_kg,length_cm,height_cm,head_circ_cm,bmi_kg_m2,weight_for_age_z,weight_for_age_percentile,length_for_age_z,length_for_age_percentile,stature_for_age_z,stature_for_age_percentile,head_circ_for_age_z,head_circ_for_age_percentile,bmi_for_age_z,bmi_for_age_percentile,weight_for_length_z,weight_for_length_percentile,weight_for_stature_z,weight_for_stature_percentile,data_quality_flags,notes
+ex1,M,9.5,9.7,72.0,,45.0,,0.207,58.2,-0.125,45.0,,,-0.374,35.4,,,1.018,84.6,,,,
+ex2,F,12.5,11.0,79.0,,44.5,,1.198,88.5,1.597,94.5,,,-0.547,29.2,,,0.726,76.6,,,,
+ex3,F,60.5,20.0,,112.0,,15.94,0.690,75.5,,,0.830,79.7,,,0.556,71.1,,,0.400,65.5,,
+ex4,M,120.5,32.0,,138.0,,16.80,-0.015,49.4,,,-0.125,45.0,,,0.077,53.1,,,,,,weight_for_stature not computed: height_cm 138 is outside the CDC weight_for_stature grid range 77-121.5
+ex5,M,9.0,9.7,71.0,,44.0,,0.393,65.3,-0.237,40.6,,,-0.991,16.1,,,1.316,90.6,,,,
