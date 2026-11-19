@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - name: RakTikoo
+title: "growthz: batch-compute CDC growth z-scores and percentiles from a CSV of child measurements"
+version: 0.1.0
+date-released: 2026-11-17
+license: MIT
+url: "https://github.com/RakTikoo/growthz"
+repository-code: "https://github.com/RakTikoo/growthz"
+abstract: >-
+  Batch-computes CDC growth z-scores and percentiles for a CSV of
+  child measurements (weight, length, height, head circumference,
+  BMI) using the CDC LMS method and the CDC's own published LMS
+  tables, bundled verbatim so it runs offline. Research and
+  educational tool only; not a medical device. Arithmetic against
+  published tables only: no diagnosis, interpretation or
+  recommendation.
+keywords:
+  - growth charts
+  - z-scores
+  - CDC
+  - LMS method
+  - child growth

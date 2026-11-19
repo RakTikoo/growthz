@@ -1,4 +1,4 @@
-# growthz
+# growthz — batch-compute CDC growth z-scores and percentiles from a CSV
 
 > **Research and educational tool only. Not a medical device.**
 > growthz does arithmetic against published CDC tables. It does not
@@ -21,6 +21,10 @@ every number can be checked against the source file it came from.
 
 **v1 is CDC only** (the CDC 2000 growth charts for the United States).
 The WHO Child Growth Standards are future work.
+
+**Quick install:** `pip install git+https://github.com/RakTikoo/growthz`
+(Python 3.10+, no dependencies, runs offline). Details under
+[Install](#install).
 
 ## Demo
 

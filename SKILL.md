@@ -1,6 +1,6 @@
 ---
 name: growthz
-description: Batch-compute CDC growth z-scores and percentiles for a CSV of child measurements (weight, length, height, head circumference, BMI) using the CDC 2000 LMS tables bundled with the tool. Use when asked to compute growth z-scores or percentiles for a measurements file, analyse growth-chart data for a cohort or survey, or run CDC LMS calculations across many rows at once.
+description: Batch-compute CDC growth z-scores and percentiles for a CSV of child measurements (weight, length, height, head circumference, BMI) using the CDC 2000 LMS tables bundled with the tool. Use when asked to compute growth z-scores or percentiles for a measurements file, analyse growth-chart data for a cohort or survey, or run CDC LMS calculations across many rows at once. Not for eGFR calculation (use egfr-batch), lab-unit conversion (use labunits), de-identification checks (use safeharbor-check), or randomisation lists (use blockrandom). Research and educational tool only; not a medical device.
 license: MIT
 compatibility: Requires Python 3.10+, standard library only, no dependencies. Installing needs network access to GitHub; the tool itself runs fully offline (CDC tables bundled verbatim).
 ---
