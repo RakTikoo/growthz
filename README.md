@@ -80,6 +80,34 @@ bundled in `growthz/data/` (verbatim copies; see
 `growthz/data/SOURCES.md` for the source page, download date, and
 file-by-file provenance).
 
+Or install the wheel straight from this repo's release assets (no package
+registry involved):
+
+```sh
+pip install https://github.com/RakTikoo/growthz/releases/download/v0.1.0/growthz-0.1.0-py3-none-any.whl
+```
+
+Or install from the git repo with pipx or uv:
+
+```sh
+pipx install git+https://github.com/RakTikoo/growthz.git@v0.1.0
+uv tool install --from git+https://github.com/RakTikoo/growthz.git@v0.1.0 growthz
+```
+
+With Homebrew (macOS/Linux):
+
+```sh
+brew tap RakTikoo/tools
+brew install RakTikoo/tools/growthz
+```
+
+With Scoop (Windows):
+
+```powershell
+scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
+scoop install growthz
+```
+
 ## Usage
 
 ```
