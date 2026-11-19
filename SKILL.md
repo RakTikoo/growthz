@@ -11,11 +11,10 @@ compatibility: Requires Python 3.10+, standard library only, no dependencies. In
 
 growthz computes CDC growth z-scores and percentiles for a whole CSV of
 child measurements at once, using the CDC LMS method and the CDC's own
-published LMS tables, bundled verbatim. For every measure a row has
-enough inputs for (weight-, length-, stature-, head-circumference- and
-BMI-for-age, weight-for-length/stature) it appends a z-score and a
-percentile. Arithmetic against published tables only: no diagnosis, no
-assessment, no categories, no advice.
+published LMS tables. For every measure a row has enough inputs for
+(weight-, length-, stature-, head-circumference- and BMI-for-age,
+weight-for-length/stature) it appends a z-score and a percentile.
+Arithmetic against published tables only: no diagnosis, no assessment, no categories, no advice.
 
 ## Install
 
@@ -38,8 +37,7 @@ growthz convert measurements.csv --out measurements_growthz.csv
   `head_circ_cm`, `bmi`. Other columns pass through untouched.
 - Length and stature are separate columns on purpose: different
   measurements, different tables; mixing them is a classic source of
-  wrong z-scores. BMI is computed from weight + standing height when
-  no `bmi` column is given, never from recumbent length.
+  wrong z-scores. BMI is computed from weight + standing height when no `bmi` column is given, never from recumbent length.
 - L, M and S are linearly interpolated between table rows for the
   exact age (or length/height); at exact grid points the published
   values are used verbatim. No extrapolation, ever.
@@ -51,11 +49,10 @@ input column and appends `<measure>_z` and `<measure>_percentile` per
 computable measure, plus `data_quality_flags` and `notes`. An empty
 z-score cell means that measure was not computable for that row; when
 an input was present but out of the table's range, `notes` says so.
-The summary counts rows carrying a data-quality flag: z-scores outside
-the WHO plausibility ranges are named in `data_quality_flags` (for
-example `weight_for_age_z_outside_plausibility_range(-6..+5)`). A flag
-is a statement about the data — check the measurement or its entry —
-not a judgement about the child, and no interpretation is attached.
+Rows with z-scores outside the WHO plausibility ranges are counted in
+the summary and named in `data_quality_flags` (for example
+`weight_for_age_z_outside_plausibility_range(-6..+5)`). A flag is a
+statement about the data — check the measurement or its entry — not a judgement about the child, and no interpretation is attached.
 
 A bad row (unrecognised sex, non-numeric age, non-positive
 measurement) does not abort the run: the row is written out with the
@@ -66,12 +63,10 @@ empty or missing file — one clean error, no output written.
 ## Limits
 
 - **Research and educational tool only. Not a medical device.**
-  growthz does arithmetic against published CDC tables. It does not
-  diagnose, interpret, or recommend anything, and its output must be
-  verified before any clinical use.
+  growthz does arithmetic against published CDC tables; it does not
+  diagnose, interpret, or recommend anything, and its output must be verified before any clinical use.
 - CDC only in v1: the CDC 2000 charts for the United States. The WHO
-  Child Growth Standards and WHO 2007 reference are a different
-  reference and are not in v1. Do not mix references.
+  Child Growth Standards and WHO 2007 reference are a different reference, not in v1. Do not mix references.
 - Age is taken as given: no age computed from dates, no correction for
   gestational age or prematurity, no WHO 0.7 cm length/height
   adjustment.
@@ -79,9 +74,7 @@ empty or missing file — one clean error, no output written.
   value; systems using the whole-month row will differ slightly
   between grid points.
 - Extreme z-scores are the plain LMS formula's: unlike the WHO
-  method, the calculation is not modified beyond ±3 SD, so very
-  extreme measurements produce very extreme z-scores — that is what
-  the plausibility flags are for.
+  method, the calculation is not modified beyond ±3 SD, so very extreme measurements produce very extreme z-scores — that is what the plausibility flags are for.
 - The reference is a reference: CDC 2000 describes the US reference
   population; a percentile is a position in that population, nothing
   more.
