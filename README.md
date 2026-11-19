@@ -1,5 +1,7 @@
 # growthz — batch-compute CDC growth z-scores and percentiles from a CSV
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/RakTikoo/growthz)
+
 > **Research and educational tool only. Not a medical device.**
 > growthz does arithmetic against published CDC tables. It does not
 > diagnose, interpret, or recommend anything, and its output must be
@@ -107,6 +109,8 @@ With Scoop (Windows):
 scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
 scoop install growthz
 ```
+
+**For agent users:** this repository ships a `SKILL.md` for AI agents. Install it with `npx skills add RakTikoo/growthz`.
 
 ## Usage
 
