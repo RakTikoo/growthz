@@ -247,6 +247,15 @@ values rejected per row, an extreme row that overflowed the LMS
 formula no longer aborts the batch, surplus CSV fields ignored with
 a warning).
 
+## Use with an AI agent
+
+This repo ships a [SKILL.md](SKILL.md) written to the Agent Skills open
+standard. If your coding agent supports skills, point it at this repo and
+it can install growthz, run it on your CSVs, and read the results for
+you. The skill works as documented when the repo is cloned under its
+real name (`growthz`) — the standard matches a skill to its folder
+name.
+
 ## License
 
 MIT. Free and open source, for science. The bundled CDC data files are
